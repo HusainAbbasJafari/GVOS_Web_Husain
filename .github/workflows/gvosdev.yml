@@ -1,0 +1,126 @@
+# name: Deploy to Server
+
+# on:
+#   push:
+#     branches: [main]
+
+# jobs:
+#   deploy:
+#     runs-on: ubuntu-latest
+
+#     steps:
+#       - name: ✅ Checkout Code
+#         uses: actions/checkout@v3
+
+#       - name: 🛠️ Setup Node.js
+#         uses: actions/setup-node@v4
+#         with:
+#           node-version: 22
+
+#       - name: 📦 Install Dependencies & Build
+#         run: |
+#           echo "📦 Installing dependencies..."
+#           npm install --legacy-peer-deps 
+#           echo "🧹Cleaning up..."
+#           npm run clean
+#           echo "🏗️ Building project..."
+#           npm run build:test
+        
+#       - name: 🗂️ Prepare Upload Folder
+#         run: |
+#           echo "📁 Creating temporary build folder..."
+#           mkdir temp-build
+#           echo "📤 Copying necessary files to temp-build..."
+#           cp -r .next public package.json next.config.mjs src deploy.sh temp-build/
+
+#       - name: 🚀 Upload build to Server via SCP
+#         uses: appleboy/scp-action@master
+#         with:
+#           host: gvossites.augurslive.com
+#           port: 22
+#           username: gvossites
+#           password: ${{ secrets.SFTP_PASSWORD }}
+#           source: "temp-build/*"
+#           target: "/home/gvossites/public_html/GvosSite/GVOS_Website"
+
+#       - name: 🧠 Trigger Deploy Script Over SSH
+#         uses: appleboy/ssh-action@v1.0.0
+#         with:
+#           host: gvossites.augurslive.com
+#           username: gvossites
+#           password: ${{ secrets.SFTP_PASSWORD }}
+#           script: |
+#             echo "📂 Navigating to project directory..."
+#             cd /home/gvossites/public_html/GvosSite/GVOS_Website
+#             echo "🔐 Making deploy.sh executable..."
+#             chmod +x deploy.sh
+#             echo "🚀 Executing deploy.sh..."
+#             ./deploy.sh
+#             echo "✅ Deployment completed successfully!"
+name: Deploy to GVOS Development Server
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: ✅ Checkout Code
+        uses: actions/checkout@v3
+
+      - name: 🛠️ Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      
+      - name: 📄 Write Staging Environment Variables
+        run: echo "${{ secrets.ENV_STAGING }}" > .env
+
+      - name: 📦 Install & Build
+        run: |
+          echo "📦 Installing dependencies..."
+          npm install --legacy-peer-deps
+          npm install -g env-cmd
+          echo "🧹Cleaning up..."
+          npm run clean
+          echo "🏗️ Building project..."
+          npm run build:test
+
+      - name: 🗂️ Prepare Upload Folder
+        run: |
+          mkdir temp-build
+          cp -r .next public package.json src deploy.sh temp-build/
+
+      - name: 🛰️ Upload to Jump Host
+        uses: appleboy/scp-action@master
+        with:
+          host: 135.181.193.247
+          username: root
+          password: ${{ secrets.JUMP_HOST_PASS }}
+          port: 22
+          source: "temp-build/*"
+          target: "/root/temp-deploy"
+
+      - name: 🚀 Deploy from Jump Host to Remote Server
+        uses: appleboy/ssh-action@master
+        with:
+          host: 135.181.193.247
+          username: root
+          password: ${{ secrets.JUMP_HOST_PASS }}
+          port: 22
+          script: |
+            echo "📁 Creating temp-build on remote server..."
+            ssh -i /root/.ssh/gvossitesdev -o StrictHostKeyChecking=no gvossites@gvossites.augurslive.com "mkdir -p /home/gvossites/public_html/GvosSite/GVOS_Website/temp-build"
+            echo "📦 Copying to remote project dir..."
+            scp -i ~/.ssh/gvossitesdev -v -o StrictHostKeyChecking=no -r /root/temp-deploy/* gvossites@gvossites.augurslive.com:/home/gvossites/public_html/GvosSite/GVOS_Website/temp-build
+            echo "🚀 Running deploy.sh on remote server..."
+            ssh -i /root/.ssh/gvossitesdev -o StrictHostKeyChecking=no gvossites@gvossites.augurslive.com << 'EOF'
+              cd /home/gvossites/public_html/GvosSite/GVOS_Website
+              chmod +x deploy.sh
+              ./deploy.sh
+            EOF
+            echo "🧹 Cleaning up /root/temp-deploy from jump host..."
+            rm -rf /root/temp-deploy

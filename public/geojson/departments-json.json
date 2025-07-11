@@ -1,0 +1,248 @@
+[
+    {
+        "id": 116,
+        "name": "Finist\u00e8re",
+        "cantons": [
+            {
+                "id": 822,
+                "gid": "FRA.3.2.1.4_1",
+                "name": "Brest"
+            },
+            {
+                "id": 823,
+                "gid": "FRA.3.2.1.1_1",
+                "name": "Brest-Cavale-Blanche-Bohars-Guil"
+            },
+            {
+                "id": 824,
+                "gid": "FRA.3.2.1.2_1",
+                "name": "Brest-L'Hermitage-Gouesnou"
+            },
+            {
+                "id": 825,
+                "gid": "FRA.3.2.1.3_1",
+                "name": "Brest-Plouzan\u00e9"
+            },
+            {
+                "id": 826,
+                "gid": "FRA.3.2.1.5_1",
+                "name": "Daoulas"
+            },
+            {
+                "id": 827,
+                "gid": "FRA.3.2.1.6_1",
+                "name": "Guipavas"
+            },
+            {
+                "id": 828,
+                "gid": "FRA.3.2.1.7_1",
+                "name": "Landerneau"
+            },
+            {
+                "id": 829,
+                "gid": "FRA.3.2.1.8_1",
+                "name": "Lannilis"
+            },
+            {
+                "id": 830,
+                "gid": "FRA.3.2.1.9_1",
+                "name": "Lesneven"
+            },
+            {
+                "id": 831,
+                "gid": "FRA.3.2.1.10_1",
+                "name": "Ouessant"
+            },
+            {
+                "id": 832,
+                "gid": "FRA.3.2.1.11_1",
+                "name": "Plabennec"
+            },
+            {
+                "id": 833,
+                "gid": "FRA.3.2.1.12_1",
+                "name": "Ploudalm\u00e9zeau"
+            },
+            {
+                "id": 834,
+                "gid": "FRA.3.2.1.13_1",
+                "name": "Ploudiry"
+            },
+            {
+                "id": 835,
+                "gid": "FRA.3.2.1.14_1",
+                "name": "Saint-Renan"
+            },
+            {
+                "id": 836,
+                "gid": "FRA.3.2.2.1_1",
+                "name": "Carhaix-Plouguer"
+            },
+            {
+                "id": 837,
+                "gid": "FRA.3.2.2.2_1",
+                "name": "Ch\u00e2teaulin"
+            },
+            {
+                "id": 838,
+                "gid": "FRA.3.2.2.3_1",
+                "name": "Ch\u00e2teauneuf-du-Faou"
+            },
+            {
+                "id": 839,
+                "gid": "FRA.3.2.2.4_1",
+                "name": "Crozon"
+            },
+            {
+                "id": 840,
+                "gid": "FRA.3.2.2.5_1",
+                "name": "Huelgoat"
+            },
+            {
+                "id": 841,
+                "gid": "FRA.3.2.2.6_1",
+                "name": "LeFaou"
+            },
+            {
+                "id": 842,
+                "gid": "FRA.3.2.2.7_1",
+                "name": "Pleyben"
+            },
+            {
+                "id": 843,
+                "gid": "FRA.3.2.3.1_1",
+                "name": "Landivisiau"
+            },
+            {
+                "id": 844,
+                "gid": "FRA.3.2.3.2_1",
+                "name": "Lanmeur"
+            },
+            {
+                "id": 845,
+                "gid": "FRA.3.2.3.3_1",
+                "name": "Morlaix"
+            },
+            {
+                "id": 846,
+                "gid": "FRA.3.2.3.4_1",
+                "name": "Plouescat"
+            },
+            {
+                "id": 847,
+                "gid": "FRA.3.2.3.5_1",
+                "name": "Plouigneau"
+            },
+            {
+                "id": 848,
+                "gid": "FRA.3.2.3.6_1",
+                "name": "Plouz\u00e9v\u00e9d\u00e9"
+            },
+            {
+                "id": 849,
+                "gid": "FRA.3.2.3.7_1",
+                "name": "Saint-Pol-de-L\u00e9on"
+            },
+            {
+                "id": 850,
+                "gid": "FRA.3.2.3.8_1",
+                "name": "Saint-Th\u00e9gonnec"
+            },
+            {
+                "id": 851,
+                "gid": "FRA.3.2.3.9_1",
+                "name": "Sizun"
+            },
+            {
+                "id": 852,
+                "gid": "FRA.3.2.3.10_1",
+                "name": "Taul\u00e9"
+            },
+            {
+                "id": 853,
+                "gid": "FRA.3.2.4.1_1",
+                "name": "Arzano"
+            },
+            {
+                "id": 854,
+                "gid": "FRA.3.2.4.2_1",
+                "name": "Bannalec"
+            },
+            {
+                "id": 855,
+                "gid": "FRA.3.2.4.3_1",
+                "name": "Briec"
+            },
+            {
+                "id": 856,
+                "gid": "FRA.3.2.4.4_1",
+                "name": "Concarneau"
+            },
+            {
+                "id": 857,
+                "gid": "FRA.3.2.4.5_1",
+                "name": "Douarnenez"
+            },
+            {
+                "id": 858,
+                "gid": "FRA.3.2.4.6_1",
+                "name": "Fouesnant"
+            },
+            {
+                "id": 859,
+                "gid": "FRA.3.2.4.7_1",
+                "name": "Guilvinec"
+            },
+            {
+                "id": 860,
+                "gid": "FRA.3.2.4.8_1",
+                "name": "Plogastel-Saint-Germain"
+            },
+            {
+                "id": 861,
+                "gid": "FRA.3.2.4.9_1",
+                "name": "Pont-Aven"
+            },
+            {
+                "id": 862,
+                "gid": "FRA.3.2.4.10_1",
+                "name": "Pont-Croix"
+            },
+            {
+                "id": 863,
+                "gid": "FRA.3.2.4.11_1",
+                "name": "Pont-l'Abb\u00e9"
+            },
+            {
+                "id": 864,
+                "gid": "FRA.3.2.4.15_1",
+                "name": "Quimper"
+            },
+            {
+                "id": 865,
+                "gid": "FRA.3.2.4.12_1",
+                "name": "Quimper2eCanton"
+            },
+            {
+                "id": 866,
+                "gid": "FRA.3.2.4.13_1",
+                "name": "Quimper3eCanton"
+            },
+            {
+                "id": 867,
+                "gid": "FRA.3.2.4.14_1",
+                "name": "Quimperl\u00e9"
+            },
+            {
+                "id": 868,
+                "gid": "FRA.3.2.4.16_1",
+                "name": "Rosporden"
+            },
+            {
+                "id": 869,
+                "gid": "FRA.3.2.4.17_1",
+                "name": "Sca\u00ebr"
+            }
+        ]
+    }
+]
