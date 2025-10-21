@@ -7,6 +7,9 @@ A comprehensive property management and CRM platform for buying, selling, and re
 ![React](https://img.shields.io/badge/React-18+-61DAFB?style=flat-square&logo=react)
 ![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
 
+
+**🔗 Live Site:** [https://greenstoneintl.com/](https://greenstoneintl.com/)
+
 ---
 
 ## 📸 Screenshots
