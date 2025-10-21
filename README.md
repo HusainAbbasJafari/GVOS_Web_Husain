@@ -1,4 +1,4 @@
-# 🏔️ GVOS Greenstone CRM
+#  GVOS Greenstone CRM
 
 A comprehensive property management and CRM platform for buying, selling, and renting luxury properties in the French Alps, French Riviera, and Languedoc-Roussillon. Built with Next.js 14+, this enterprise-grade system streamlines property management, lead generation, and client relationships.
 
@@ -586,29 +586,6 @@ export default config
 - Add tests for new features
 - Update documentation as needed
 - Use TypeScript for type safety
-
----
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-## 💬 Support
-
-Need help? Contact us:
-
-- 📧 **Email:** support@greenstone.com
-- 📞 **Phone:** +44 (0)330 057 0292
-- 💬 **Live Chat:** Available on website
-- 📚 **Documentation:** [docs.greenstone.com](https://docs.greenstone.com)
-
-### Regional Offices
-
-- **French Alps Office:** Contact for ski properties
-- **French Riviera Office:** Contact for coastal properties
-- **Languedoc Office:** Contact for Mediterranean properties
 
 ---
 
